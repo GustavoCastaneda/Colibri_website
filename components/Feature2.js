@@ -1,9 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Bloques from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/NFT banner (6).png' 
-import Dev from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/NFT-webdev.webp'
-import DAO from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/NFT-DAO.webp'
-import Consul from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/NFT-consul.webp'
+
 
 
 export default function Feature2() {
@@ -15,7 +12,7 @@ export default function Feature2() {
                     <h2 className="text-3xl font-bold tracking-tight text-center sm:text-6xl text-gray-900">Get started with us!</h2>
                     <p className="max-w-3xl mx-auto mt-4 text-center relative text-transparent bg-clip-text bg-gradient-to-r to-blue-400 from-red-500 text-2xl font-bold">UNLIMITED POSSIBILITIES</p>
                 </div>
-                <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                <div className="grid lg:gap-8 lg:grid-cols-2 lgnpm:items-center">
                     <div>
                         <div className='gradient-text w-[355px]'>
                             <h3 className="gradient-text text-6xl font-extrabold  titulos">COMPANIES</h3>

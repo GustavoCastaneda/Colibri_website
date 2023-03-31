@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Typewriter from 'typewriter-effect';
-import Typing from 'react-typing-animation';
 import TypingComponent from './TypingComponent.js';
 import { motion } from 'framer-motion';
 import { fadeIn, container, item, staggerContainer, cardVariants, textVariant2, textVarianting, ctaVariant } from '../utils/motion'

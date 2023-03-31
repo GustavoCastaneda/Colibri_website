@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Bloques from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/NFT banner (6).png' 
-import NFT from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/nft-banner.webp'
 import GetStarted from './GetStarted'
 
 export default function Feature3() {

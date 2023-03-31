@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Logo3 from '../public/images/What-is-cryptocurrency.webp'
 import { motion } from 'framer-motion';
 import { slideIn, staggerContainer, textVariant, navVariants } from '../utils/motion'
 
