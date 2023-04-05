@@ -8,7 +8,7 @@ import Schools from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_
 import Footer from '../components/Footer.js'
 import PreFooter from '../components/PreFooter.js'
 
-import Image from 'next/image.js'
+import Image from 'next/image';
 import CtaSection2 from '../components/CtaSection2.js'
 
 

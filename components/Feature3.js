@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from 'next/image';
 import GetStarted from './GetStarted'
 
 export default function Feature3() {
@@ -61,7 +61,6 @@ export default function Feature3() {
                             src="https://imgcolibweb.s3.us-west-1.amazonaws.com/nft-banner.webp"
                             alt="Bloques"
                             className="mx-auto border-2 border-indigo-600 rounded-lg"
-                            layout="responsive"
                             width={500}
                             height={500}
                         />

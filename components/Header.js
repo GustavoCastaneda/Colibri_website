@@ -20,8 +20,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { CLIENT_PUBLIC_FILES_PATH } from 'next/dist/shared/lib/constants'
-import Logo from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/logo-header.webp'
-import Image from 'next/image'
+import Image from 'next/image';
 import Link from 'next/link'
 import { motion } from "framer-motion";
 import { navVariants, } from '../utils/motion';
@@ -139,13 +138,16 @@ export default function Header() {
               <a href="/">
                 <span className="sr-only">Colibri Logo</span>
                 <div className="sm:h-12 w-48">
-                  <Image
-                    src="https://imgcolibweb.s3.us-west-1.amazonaws.com/logo-header.webp"
-                    alt="Colibri Logo"
-                    layout="responsive"
-                    width={192}
-                    height={48}
-                  />
+                      <Image
+                      src="https://imgcolibweb.s3.us-west-1.amazonaws.com/logo-header.webp"
+                      alt="Colibri Logo"
+                      width={192}
+                      height={48}
+                      className="w-[192px] h-[48px]"
+
+                      />
+
+
                 </div>
               </a>
             </div>

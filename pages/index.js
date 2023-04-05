@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Image from 'next/image';
 import Header from '../components/Header.js'
 import Main from '../components/Main.js'
 import CtaSection from '../components/CtaSection.js'

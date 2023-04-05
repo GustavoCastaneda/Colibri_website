@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from 'next/image';
 import Bloques from '../public/images/NFT banner (6).png' 
-import Pruebas from '../components/Pruebas.js'
 import Particles from '../components/Particles.js'
 
 export default function CtaSection2()  {

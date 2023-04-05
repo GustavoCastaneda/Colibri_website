@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from 'next/image';
 
 
 
@@ -65,7 +65,6 @@ export default function Feature2() {
                             src="https://imgcolibweb.s3.us-west-1.amazonaws.com/NFT-DAO.webp"
                             alt="Bloques"
                             className="mx-auto"
-                            layout="responsive"
                             width={500}
                             height={500}
                         />
@@ -128,7 +127,7 @@ export default function Feature2() {
                                 src="https://imgcolibweb.s3.us-west-1.amazonaws.com/NFT-webdev.webp"
                                 alt=""
                                 className="mx-auto rounded-lg"
-                                layout="responsive"
+                                
                                 width={500}
                                 height={500}
                             />
@@ -138,8 +137,8 @@ export default function Feature2() {
                
                 <div className="grid lg:gap-8 lg:grid-cols-2 pt-40 lg:items-center">
                     <div>
-                        <div className='sm:w-[550px] w-[450px]'>
-                            <h3 className="gradient-text text-6xl sm:text-7xl font-extrabold titulos">BLOCKCHAIN CONSULTING</h3>
+                        <div className='sm:w-[550px] w-[345px]'>
+                            <h3 className="gradient-text text-5xl sm:text-8xl font-extrabold titulos">BLOCKCHAIN CONSULTING</h3>
                         </div>
                         <p className="mt-3 text-lg text-gray-700 texto">We can help you solve all your doubts and projects with our consultancy. We have experts in the field who can guide you in implementing blockchain solutions for your company.</p>
                         <div className="mt-12 space-y-12">
@@ -189,7 +188,6 @@ export default function Feature2() {
                             src="https://imgcolibweb.s3.us-west-1.amazonaws.com/NFT-consul.webp"
                             alt=""
                             className="mx-auto"
-                            layout="responsive"
                             width={500}
                             height={500}
                         />

@@ -2,12 +2,11 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HeadSolutions from '../components/HeadSolutions.js'
-import NftBanner from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/NFT banner.png'
 import Firewall from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/nft-banner-5.webp'
 import Companies from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/nft-banner-2.webp'
 import Schools from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/nft-banner-3.webp'
 import PreFooter from '../components/PreFooter.js'
-import Image from 'next/image'
+import Image from 'next/image';
 import HeadServices from '../components/HeadServices'
 
 
@@ -75,8 +74,9 @@ export default function services() {
                                     </div>
                                 </div>
                                 <div aria-hidden="true" className="mt-10 lg:mt-0">
-                                    <Image src={NftBanner} alt="Nft banner" />
+                                    <Image src="https://imgcolibweb.s3.us-west-1.amazonaws.com/nft-banner.webp" alt="Nft banner" />
                                 </div>
+
                             </div>
                             <div className='pt-24'>
                                 <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">

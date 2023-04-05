@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from 'next/image';
 import TypingComponent from './TypingComponent.js';
 import { motion } from 'framer-motion';
 import { fadeIn, container, item, staggerContainer, cardVariants, textVariant2, textVarianting, ctaVariant } from '../utils/motion'
@@ -28,9 +28,9 @@ export default function Feature() {
                             className=' rounded-lg w-full h-[470px] border-2 border-indigo-600'>
                                 
                                 <div className='h-[50px] mx-4 space-x-1 border-b border-indigo-600'>
-                                    <button class="bg-red-500 py-2 px-2 rounded-full"></button>
-                                    <button class="bg-yellow-400 py-2 px-2 rounded-full"></button>
-                                    <button class="bg-green-500 py-2 px-2 rounded-full"></button>
+                                    <button className="bg-red-500 py-2 px-2 rounded-full"></button>
+                                    <button className="bg-yellow-400 py-2 px-2 rounded-full"></button>
+                                    <button className="bg-green-500 py-2 px-2 rounded-full"></button>
                                 </div>
                                 <div className='mx-4'>
                                     <div className='typing pt-4'>

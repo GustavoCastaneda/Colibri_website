@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { slideIn, staggerContainer, textVariant, navVariants } from '../utils/motion'
 
@@ -40,26 +40,27 @@ export default function Main()  {
                     </div>
                 </motion.div>
                 <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      animate="show"
-      exit="hidden"
-      transition={{ duration: 1 }}
-    >
-                <motion.div
-                    variants={slideIn('right', 'tween', 1, 1)}
-                    className="flex-1 flex justify-center items-center md:my-0 pt-12 relative md:py-10 lg:py-0"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
+                    transition={{ duration: 1 }}
                 >
-                    <div className="illus sm:w-[500px] sm:h-[500px] relative z-[5]">
-                    <Image
-                        src="https://imgcolibweb.s3.us-west-1.amazonaws.com/What-is-cryptocurrency.webp"
-                        layout="responsive"
-                        width={500}
-                        height={500}
-                        alt="coins"
-                    />
-                    </div>
-                </motion.div>
+                    <motion.div
+                        variants={slideIn('right', 'tween', 1, 1)}
+                        className="flex-1 flex justify-center items-center md:my-0 pt-12 relative md:py-10 lg:py-0"
+                    >
+                        <div className="illus  z-5">
+                                <Image
+                                    src="https://imgcolibweb.s3.us-west-1.amazonaws.com/What-is-cryptocurrency.webp"
+                                    width={500}
+                                    height={500}
+                                    alt="coins"
+                                    priority
+                                />
+                        </div>
+
+                    </motion.div>
                 </motion.div>
             </section>
     </div>
