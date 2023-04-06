@@ -168,6 +168,21 @@
 
 
 
+/* Oculta la versión móvil por defecto */
+.mobile-animation {
+  display: none;
+}
+
+/* Cuando la pantalla sea igual o menor a 768px (tamaño de pantalla típico para dispositivos móviles), 
+   muestra la versión móvil y oculta la versión de escritorio */
+@media (max-width: 768px) {
+  .desktop-animation {
+    display: none;
+  }
+  .mobile-animation {
+    display: block;
+  }
+}
 
     
 

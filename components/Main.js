@@ -1,12 +1,14 @@
 import React from 'react'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { slideIn, staggerContainer, textVariant, navVariants } from '../utils/motion'
+import { slideIn, staggerContainer, textVariant, navVariants, ctaVariant, imgPrincipal, fadeIn } from '../utils/motion'
+import { useState, useEffect } from "react";
 
 
 
 
 export default function Main()  {
+    
   return (
     <div>
             <section className='flex lg:flex-row flex-col sm:py-16 py-6'>
@@ -42,15 +44,37 @@ export default function Main()  {
                 <motion.div
                     variants={staggerContainer}
                     initial="hidden"
-                    animate="show"
+                    whileInView="show"
+                    viewport={{ once: 'flase', amount: 0.25 }}
                     exit="hidden"
                     transition={{ duration: 1 }}
                 >
-                    <motion.div
-                        variants={slideIn('right', 'tween', 1, 1)}
-                        className="flex-1 flex justify-center items-center md:my-0 pt-12 relative md:py-10 lg:py-0"
-                    >
-                        <div className="illus  z-5">
+                    <div className="desktop-animation">
+                        <motion.div
+                            variants={slideIn('right', 'tween', 1, 1)}
+                            className="flex-1 flex justify-center items-center md:my-0 pt-12 relative md:py-10 lg:py-0"
+                        >
+                            <div className="illus z-5">
+                            <Image
+                                src="https://imgcolibweb.s3.us-west-1.amazonaws.com/What-is-cryptocurrency.webp"
+                                width={500}
+                                height={500}
+                                alt="coins"
+                                priority
+                            />
+                            </div>
+                        </motion.div>
+                    </div>
+
+                        {/* Versión móvil */}
+                    <div className="mobile-animation">
+                            <motion.div
+                                    variants ={fadeIn('up', "tween", 0.9, 2)}
+                                    initial="hidden"
+                                    animate="show" 
+                                className="flex-1 flex justify-center items-center md:my-0 pt-12 relative md:py-10 lg:py-0"
+                            >
+                                <div className="illus z-5">
                                 <Image
                                     src="https://imgcolibweb.s3.us-west-1.amazonaws.com/What-is-cryptocurrency.webp"
                                     width={500}
@@ -58,9 +82,9 @@ export default function Main()  {
                                     alt="coins"
                                     priority
                                 />
-                        </div>
-
-                    </motion.div>
+                                </div>
+                            </motion.div>
+                    </div>
                 </motion.div>
             </section>
     </div>

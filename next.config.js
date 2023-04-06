@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    unoptimized: true,
     domains: ["imgcolibweb.s3.us-west-1.amazonaws.com"],
   },
 };

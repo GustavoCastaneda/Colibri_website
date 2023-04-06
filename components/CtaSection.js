@@ -6,6 +6,8 @@ import { fadeIn, container, item, staggerContainer, cardVariants, textVariant2, 
 
 
 export default function CtaSection() {
+
+  
   return (
   <div className=''>
     <section className="text-gray-600 body-font">

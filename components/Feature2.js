@@ -137,7 +137,7 @@ export default function Feature2() {
                
                 <div className="grid lg:gap-8 lg:grid-cols-2 pt-40 lg:items-center">
                     <div>
-                        <div className='sm:w-[550px] w-[345px]'>
+                        <div className='sm:w-[650px] w-[345px]'>
                             <h3 className="gradient-text text-5xl sm:text-8xl font-extrabold titulos">BLOCKCHAIN CONSULTING</h3>
                         </div>
                         <p className="mt-3 text-lg text-gray-700 texto">We can help you solve all your doubts and projects with our consultancy. We have experts in the field who can guide you in implementing blockchain solutions for your company.</p>
