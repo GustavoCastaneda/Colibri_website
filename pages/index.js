@@ -16,6 +16,9 @@ import React, { lazy, Suspense } from 'react';
 export default function Home() {
   return (
        <div>
+          <Head>
+            <title>Colibri web 3.0</title>
+          </Head>
           <div className='bg-gradient-to-t to-white via-blue-200 from-blue-300'>
             <Header />
               <main className='lg:pt-20 pt-10'>

@@ -185,7 +185,15 @@
 }
 
     
+.backgroundCarrer{
+  
+  
+  background-color: rgb(31, 41, 55);
+  background-image: radial-gradient(at 0% 8%, rgb(59, 130, 246) 0, transparent 30%), radial-gradient(at 100% 66%, rgb(139, 92, 246) 0, transparent 43%), radial-gradient(at 22% 100%, rgb(56, 189, 248) 0, transparent 31%), radial-gradient(at 79% 0%, rgb(216, 180, 254) 0, transparent 23%);
 
+
+
+}
 
 @tailwind base;
 @tailwind components;

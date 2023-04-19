@@ -33,20 +33,20 @@ const solutions = [
   {
     name: 'Companies',
     description: 'Blockchain Solutions for companies: Smart Contracts, DeApps, Web development',
-    href: '/solutions',
+    href: '/solutions.html',
     icon: BuildingOfficeIcon,
   },
   {
     name: 'Schools & Institutions',
     description: 'Tokens, certificates and aplications with Blockchain technology to make them more secure.',
-    href: '/solutions',
+    href: '/solutions.html',
     icon: AcademicCapIcon,
   },
   { name: 'Security', description: "Your customers' data will be safe and secure.", href: '/solutions', icon: ShieldCheckIcon },
   {
     name: 'NFT´S',
     description: "SmartContracts, Nft minitng site, Blockchain Consulting and everything you need to launch your collection.",
-    href: '/solutions',
+    href: '/solutions.html',
     icon: RocketLaunchIcon,
   },
   
@@ -55,34 +55,34 @@ const services = [
     {
       name: 'Smart Contracts',
       description: 'We can create any contract that you want iside the blockchain.',
-      href: '/services',
+      href: '/services.html',
       icon:ClipboardDocumentIcon,
     },
     {
       name: 'Web Development',
       description: 'Web3 Integrations, Mobile Responsiveness, Minting Pages, Landing Pages, E-commerce',
-      href: '/services',
+      href: '/services.html',
       icon: GlobeAltIcon,
     },
     
     {
       name: 'Tokens and Centificates',
       description: "With the Smart Contract technology we can create certificates that can live inside Blockchain, like COVID vaccine certificates, graduation certificates, etc. ",
-      href: '/services',
+      href: '/services.html',
       icon: DocumentCheckIcon,
     },
 
     {
         name: 'Blockchain Consulting',
         description: "Let us help you answer the most complicate questions you may have, and help you to execute the most dificul challenges",
-        href: '/services',
+        href: '/services.html',
         icon: CubeTransparentIcon,
       },
 
     {
     name: 'NFT´s',
     description: "Let us help you to launch your next NFT collection with the most professional developers",
-    href: '/services',
+    href: '/services.html',
     icon: RocketLaunchIcon,
     },  
     
@@ -96,19 +96,19 @@ const resources = [
   {
     name: 'Help Center',
     description: 'Get all of your questions answered in our forums or contact support.',
-    href: '/services',
+    href: '/services.html',
     icon: LifebuoyIcon,
   },
   {
     name: 'Guides',
     description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '/services',
+    href: '/services.html',
     icon: BookmarkSquareIcon,
   },
   {
     name: 'Events',
     description: 'See what meet-ups and other events we might be planning near you.',
-    href: '/services',
+    href: '/services.html',
     icon: CalendarIcon,
   },
   { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
@@ -131,9 +131,9 @@ export default function Header() {
       whileInView="show"
       viewport={{ once: 'flase', amount: 0.25 }}
     >
-      <Popover className="relative bg-blue ">
+      <Popover className="relative">
         <div className="mx-auto lg:px-5 md:px-1 px-4">
-          <div className=" flex items-center justify-between  py-6 md:justify-start md:space-x-10">
+          <div className=" flex items-center justify-between  py-6  md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="/">
                 <span className="sr-only">Colibri Logo</span>
@@ -146,18 +146,16 @@ export default function Header() {
                       className="w-[192px] h-[48px]"
 
                       />
-
-
                 </div>
               </a>
             </div>
-            <div className="-my-2 -mr-2 md:hidden">
+            <div className="-my-2 -mr-2 lg:hidden">
               <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                 <span className="sr-only">Open menu</span>
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-            <Popover.Group as="nav" className="hidden space-x-10 lg:space-x-20 xl:space-x-32 md:space-x-10 md:flex ">
+            <Popover.Group as="nav" className="hidden space-x-10 lg:space-x-20 xl:space-x-32 md:space-x-10 lg:flex mt-3">
               <Popover className="relative">
                 {({ open }) => (
                   <>
@@ -204,7 +202,7 @@ export default function Header() {
                               </a>
                             ))}
                           </div>
-                          <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                          <div className="space-y-6 bg-blue-500 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                             {callsToAction.map((item) => (
                               <div key={item.name} className="flow-root">
                                 <a
@@ -377,12 +375,12 @@ export default function Header() {
 
 
 
-            <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
+            <div className="hidden items-center justify-end lg:flex md:flex-1 lg:w-0 mt-3">
               <a href="#" className="whitespace-nowrap text-base font-medium text-gray-900 hover:text-gray-900">
                 About us
               </a>
               <a
-                href="#"
+                href="/contact.html"
                 className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
               >
                 Contact
@@ -400,14 +398,14 @@ export default function Header() {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Popover.Panel focus className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
+          <Popover.Panel focus className="absolute z-20 inset-x-0 top-0 origin-top-right transform p-2 transition lg:hidden">
             <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                      src="https://imgcolibweb.s3.us-west-1.amazonaws.com/logo-header.webp"
                       alt="Your Company"
                     />
                   </div>

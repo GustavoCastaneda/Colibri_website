@@ -26,6 +26,8 @@ export default function services() {
                         <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
                             
                             <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+
+                                
                                 <div>
                                     <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">Smart Contracts</h3>
                                     <p className="mt-3 text-lg dark:text-gray-900">Launch your next NFT collection with our help</p>
@@ -74,14 +76,20 @@ export default function services() {
                                     </div>
                                 </div>
                                 <div aria-hidden="true" className="mt-10 lg:mt-0">
-                                    <Image src="https://imgcolibweb.s3.us-west-1.amazonaws.com/nft-banner.webp" alt="Nft banner" />
+                                     <Image
+                                        src="https://imgcolibweb.s3.us-west-1.amazonaws.com/NFT+banner+Smart+contract.webp"
+                                        alt="Bloques"
+                                        className="mx-auto rounded-lg"
+                                        width={938}
+                                        height={788}
+                                    />
                                 </div>
 
                             </div>
                             <div className='pt-24'>
                                 <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                                     <div className="lg:col-start-2">
-                                        <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">Security</h3>
+                                        <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">Web development</h3>
                                         <p className="mt-3 text-lg dark:text-gray-900">We offer the best security options for protect your data</p>
                                         <div className="mt-12 space-y-12">
                                             <div className="flex">
@@ -126,7 +134,13 @@ export default function services() {
                                         </div>
                                     </div>
                                     <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-                                        <Image src={Firewall} alt="Firewall" className="mx-auto rounded-lg " />
+                                        <Image
+                                        src="https://imgcolibweb.s3.us-west-1.amazonaws.com/banner+Webdev+(1).webp"
+                                        alt="Bloques"
+                                        className="mx-auto rounded-lg"
+                                        width={938}
+                                        height={788}
+                                    />
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +150,7 @@ export default function services() {
                         
                             <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                                 <div>
-                                    <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">Companies</h3>
+                                    <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">Tokens & Certificates</h3>
                                     <p className="mt-3 text-lg dark:text-gray-900">Let us help your bussines geting into the Web 3.0</p>
                                     <div className="mt-12 space-y-12">
                                         <div className="flex">
@@ -181,13 +195,19 @@ export default function services() {
                                     </div>
                                 </div>
                                 <div aria-hidden="true" className="mt-10 lg:mt-0">
-                                    <Image src={Companies} alt="companies"/>
+                                <Image
+                                        src="https://imgcolibweb.s3.us-west-1.amazonaws.com/banner+Tokens2.webp"
+                                        alt="Bloques"
+                                        className="mx-auto rounded-lg"
+                                        width={938}
+                                        height={788}
+                                    />
                                 </div>
                             </div>
                             <div className='pt-24'>
                                 <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                                     <div className="lg:col-start-2">
-                                        <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">Schools & Institutions</h3>
+                                        <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">Blockchain Consulting</h3>
                                         <p className="mt-3 text-lg dark:text-gray-900">Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nibh dissentias, mei exerci tamquam euripidis cu.</p>
                                         <div className="mt-12 space-y-12">
                                             <div className="flex">
@@ -232,10 +252,77 @@ export default function services() {
                                         </div>
                                     </div>
                                     <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-                                        <Image src={Schools} alt="Schools" className="mx-auto rounded-lg" />
+                                    <Image
+                                        src="https://imgcolibweb.s3.us-west-1.amazonaws.com/banner+consulting.webp"
+                                        alt="Bloques"
+                                        className="mx-auto rounded-lg"
+                                        width={938}
+                                        height={788}
+                                    />
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+                        
+                            <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+                                <div>
+                                    <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">NFT's</h3>
+                                    <p className="mt-3 text-lg dark:text-gray-900">Let us help your bussines geting into the Web 3.0</p>
+                                    <div className="mt-12 space-y-12">
+                                        <div className="flex">
+                                            <div className="flex-shrink-0">
+                                                <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div className="ml-4">
+                                                <h4 className="text-lg font-medium leading-6 text-black">Smart Contracts</h4>
+                                                <p className="mt-2 dark:text-gray-400">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex">
+                                            <div className="flex-shrink-0">
+                                                <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div className="ml-4">
+                                                <h4 className="text-lg font-medium leading-6 text-black">dApps</h4>
+                                                <p className="mt-2 dark:text-gray-400">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex">
+                                            <div className="flex-shrink-0">
+                                                <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div className="ml-4">
+                                                <h4 className="text-lg font-medium leading-6 text-black">Web Development</h4>
+                                                <p className="mt-2 dark:text-gray-400">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div aria-hidden="true" className="mt-10 lg:mt-0">
+                                <Image
+                            src="https://imgcolibweb.s3.us-west-1.amazonaws.com/nft-banner.webp"
+                            alt="Bloques"
+                            className="mx-auto border-2 border-indigo-600 rounded-lg"
+                            width={500}
+                            height={500}
+                        />
+                                </div>
+                            </div>
+                            
                         </div>
                         </div>
             </section>

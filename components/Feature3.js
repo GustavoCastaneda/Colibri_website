@@ -13,38 +13,38 @@ export default function Feature3() {
                 </div>
                 <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                     <div>
-                        <h3 className="text-2xl font-bold tracking-tight sm:text-5xl dark:text-gray-50">Here comes the NFT's</h3>
-                        <p className="mt-3 text-lg dark:text-gray-400">Are you excited to take your art to the next level and launch your own collection of NFTs? with our team, we provide you with all the tools you need to make it a reality.</p>
+                        <h3 className="text-2xl font-bold tracking-tight sm:text-5xl">Here comes the NFT's</h3>
+                        <p className="mt-3 text-lg">Are you excited to take your art to the next level and launch your own collection of NFTs? with our team, we provide you with all the tools you need to make it a reality.</p>
                         <div className="mt-12 space-y-12">
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className=" flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                    <div className=" flex items-center justify-center w-12 h-12 rounded-md ">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Smart Contracts</h4>
-                                    <p className="mt-2 dark:text-gray-400">We will create high-fidelity contracts tailored to the needs of your project with our team of developers.</p>
+                                    <h4 className="text-lg font-medium leading-6 ">Smart Contracts</h4>
+                                    <p className="mt-2 text-gray-500">We will create high-fidelity contracts tailored to the needs of your project with our team of developers.</p>
                                 </div>
                             </div>
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-md">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Image & metadata management</h4>
-                                    <p className="mt-2 dark:text-gray-400">"Stand out in the market with high-quality NFTs thanks to our image and metadata management. Create unique and attractive NFTs with our help!</p>
+                                    <h4 className="text-lg font-medium leading-6">Image & metadata management</h4>
+                                    <p className="mt-2 dark:text-gray-500">"Stand out in the market with high-quality NFTs thanks to our image and metadata management. Create unique and attractive NFTs with our help!</p>
                                 </div>
                             </div>
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex items-center justify-center w-12 h-12 rounded-md dark:bg-violet-400 dark:text-gray-900">
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-md">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
