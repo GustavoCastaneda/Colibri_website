@@ -1,8 +1,38 @@
-import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import React, { useState } from "react"
+import Link from 'next/link';
 
 export default function contact()  {
+
+  const [query, setQuery] = useState({
+    name: "",
+    email: ""
+  });
+
+
+    // Update inputs value
+    const handleParam = () => (e) => {
+      const name = e.target.name;
+      const value = e.target.value;
+      setQuery((prevState) => ({
+        ...prevState,
+        [name]: value
+      }));
+    };
+    // Form Submit function
+    const formSubmit = (e) => {
+      e.preventDefault();
+      const formData = new FormData();
+      Object.entries(query).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+      fetch("https://getform.io/f/419b9849-62e3-4103-b760-7fd51f15c5f8", {
+        method: "POST",
+        body: formData
+      }).then(() => setQuery({ name: "", email: "", message: "" }));
+    };
+
   return (
     <div>
         <Header/>
@@ -10,7 +40,7 @@ export default function contact()  {
     <div className="container mx-auto">
       <div className="-mx-4 flex flex-wrap lg:justify-between">
         <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
-          <div className="mb-12 max-w-[570px] lg:mb-0">
+          <div className="mb-12 max-w-full lg:mb-0 mx-5">
             <span className="text-primary mb-4 block text-base font-semibold">
               Contact Us
             </span>
@@ -20,85 +50,119 @@ export default function contact()  {
               GET IN TOUCH WITH US
             </h2>
             <p className="text-body-color mb-9 text-base leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim adiqua
-              minim veniam quis nostrud exercitation ullamco
+              Do you need more information or have a question? Don't hesitate to get in touch with us. Our team of dedicated professionals is always available to provide the support you need and answer all your questions. We are committed to delivering exceptional service and ensuring that all your concerns are addressed promptly and effectively.
             </p>
-            <div className="mb-8 flex w-full max-w-[370px]">
-              <div
-                className="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]"
-              >
+          </div>
+          <div className='mb-12 max-w-[570px] lg:mb-0'>
+          <div className="mb-8 flex w-full justify-center">
+              {/* Discord */}
+            {/* <button
+                type="button"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                className="bg-indigo-400 mb-2 flex rounded px-9 py-1.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="fill-current"
-                >
+                  className="h-8 w-8"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  viewBox="0 0 24 24">
                   <path
-                    d="M21.8182 24H16.5584C15.3896 24 14.4156 23.0256 14.4156 21.8563V17.5688C14.4156 17.1401 14.0649 16.7893 13.6364 16.7893H10.4026C9.97403 16.7893 9.62338 17.1401 9.62338 17.5688V21.8173C9.62338 22.9866 8.64935 23.961 7.48052 23.961H2.14286C0.974026 23.961 0 22.9866 0 21.8173V8.21437C0 7.62972 0.311688 7.08404 0.818182 6.77223L11.1039 0.263094C11.6494 -0.0876979 12.3896 -0.0876979 12.9351 0.263094L23.2208 6.77223C23.7273 7.08404 24 7.62972 24 8.21437V21.7783C24 23.0256 23.026 24 21.8182 24ZM10.3636 15.4251H13.5974C14.7662 15.4251 15.7403 16.3995 15.7403 17.5688V21.8173C15.7403 22.246 16.0909 22.5968 16.5195 22.5968H21.8182C22.2468 22.5968 22.5974 22.246 22.5974 21.8173V8.25335C22.5974 8.13642 22.5195 8.01949 22.4416 7.94153L12.1948 1.4324C12.0779 1.35445 11.9221 1.35445 11.8442 1.4324L1.55844 7.94153C1.44156 8.01949 1.4026 8.13642 1.4026 8.25335V21.8563C1.4026 22.285 1.75325 22.6358 2.18182 22.6358H7.48052C7.90909 22.6358 8.25974 22.285 8.25974 21.8563V17.5688C8.22078 16.3995 9.19481 15.4251 10.3636 15.4251Z"
-                  />
+                    d="M19.54 0c1.356 0 2.46 1.104 2.46 2.472v21.528l-2.58-2.28-1.452-1.344-1.536-1.428.636 2.22h-13.608c-1.356 0-2.46-1.104-2.46-2.472v-16.224c0-1.368 1.104-2.472 2.46-2.472h16.08zm-4.632 15.672c2.652-.084 3.672-1.824 3.672-1.824 0-3.864-1.728-6.996-1.728-6.996-1.728-1.296-3.372-1.26-3.372-1.26l-.168.192c2.04.624 2.988 1.524 2.988 1.524-1.248-.684-2.472-1.02-3.612-1.152-.864-.096-1.692-.072-2.424.024l-.204.024c-.42.036-1.44.192-2.724.756-.444.204-.708.348-.708.348s.996-.948 3.156-1.572l-.12-.144s-1.644-.036-3.372 1.26c0 0-1.728 3.132-1.728 6.996 0 0 1.008 1.74 3.66 1.824 0 0 .444-.54.804-.996-1.524-.456-2.1-1.416-2.1-1.416l.336.204.048.036.047.027.014.006.047.027c.3.168.6.3.876.408.492.192 1.08.384 1.764.516.9.168 1.956.228 3.108.012.564-.096 1.14-.264 1.74-.516.42-.156.888-.384 1.38-.708 0 0-.6.984-2.172 1.428.36.456.792.972.792.972zm-5.58-5.604c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332.012-.732-.54-1.332-1.224-1.332zm4.38 0c-.684 0-1.224.6-1.224 1.332 0 .732.552 1.332 1.224 1.332.684 0 1.224-.6 1.224-1.332 0-.732-.54-1.332-1.224-1.332z" />
                 </svg>
-              </div>
-              <div className="w-full">
-                <h4 className="text-dark mb-1 text-xl font-bold">Our Location</h4>
-                <p className="text-body-color text-base">
-                  99 S.t Jomblo Park Pekanbaru 28292. Indonesia
-                </p>
-              </div>
+                <div className='pl-6 pt-2'>
+                  Discord
+                </div>
+              </button> */}
+              
             </div>
-            <div className="mb-8 flex w-full max-w-[370px]">
-              <div
-                className="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]"
-              >
-                <svg
-                  width="24"
-                  height="26"
-                  viewBox="0 0 24 26"
-                  className="fill-current"
+            <div className="mb-8 flex w-full justify-center">
+              {/* messenger */}
+              <Link href="https://www.facebook.com/colibri.bloc">
+                <button
+                  type="button"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  className="mb-2 flex rounded px-8 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg bg-blue-500"
                 >
-                  <path
-                    d="M22.6149 15.1386C22.5307 14.1704 21.7308 13.4968 20.7626 13.4968H2.82869C1.86042 13.4968 1.10265 14.2125 0.97636 15.1386L0.092295 23.9793C0.0501967 24.4845 0.21859 25.0317 0.555377 25.4106C0.892163 25.7895 1.39734 26 1.94462 26H21.6887C22.1939 26 22.6991 25.7895 23.078 25.4106C23.4148 25.0317 23.5832 24.5266 23.5411 23.9793L22.6149 15.1386ZM21.9413 24.4424C21.8992 24.4845 21.815 24.5687 21.6466 24.5687H1.94462C1.81833 24.5687 1.69203 24.4845 1.64993 24.4424C1.60783 24.4003 1.52364 24.3161 1.56574 24.1477L2.4498 15.2649C2.4498 15.0544 2.61819 14.9281 2.82869 14.9281H20.8047C21.0152 14.9281 21.1415 15.0544 21.1835 15.2649L22.0676 24.1477C22.0255 24.274 21.9834 24.4003 21.9413 24.4424Z"
-                  />
-                  <path
-                    d="M11.7965 16.7805C10.1547 16.7805 8.84961 18.0855 8.84961 19.7273C8.84961 21.3692 10.1547 22.6742 11.7965 22.6742C13.4383 22.6742 14.7434 21.3692 14.7434 19.7273C14.7434 18.0855 13.4383 16.7805 11.7965 16.7805ZM11.7965 21.2008C10.9966 21.2008 10.3231 20.5272 10.3231 19.7273C10.3231 18.9275 10.9966 18.2539 11.7965 18.2539C12.5964 18.2539 13.2699 18.9275 13.2699 19.7273C13.2699 20.5272 12.5964 21.2008 11.7965 21.2008Z"
-                  />
-                  <path
-                    d="M1.10265 7.85562C1.18684 9.70794 2.82868 10.4657 3.67064 10.4657H6.61752C6.65962 10.4657 6.65962 10.4657 6.65962 10.4657C7.92257 10.3815 9.18552 9.53955 9.18552 7.85562V6.84526C10.5748 6.84526 13.7742 6.84526 15.1635 6.84526V7.85562C15.1635 9.53955 16.4264 10.3815 17.6894 10.4657H17.7315H20.6363C21.4782 10.4657 23.1201 9.70794 23.2043 7.85562C23.2043 7.72932 23.2043 7.26624 23.2043 6.84526C23.2043 6.50847 23.2043 6.21378 23.2043 6.17169C23.2043 6.12959 23.2043 6.08749 23.2043 6.08749C23.078 4.90874 22.657 3.94047 21.9413 3.18271L21.8992 3.14061C20.8468 2.17235 19.5838 1.62507 18.6155 1.28828C15.795 0.193726 12.2587 0.193726 12.0903 0.193726C9.6065 0.235824 8.00677 0.446315 5.60716 1.28828C4.681 1.58297 3.41805 2.13025 2.36559 3.09851L2.3235 3.14061C1.60782 3.89838 1.18684 4.86664 1.06055 6.04539C1.06055 6.08749 1.06055 6.12959 1.06055 6.12959C1.06055 6.21378 1.06055 6.46637 1.06055 6.80316C1.10265 7.18204 1.10265 7.68722 1.10265 7.85562ZM3.37595 4.15097C4.21792 3.3932 5.27038 2.93012 6.15444 2.59333C8.34355 1.79346 9.7749 1.62507 12.1745 1.58297C12.3429 1.58297 15.6266 1.62507 18.1525 2.59333C19.0365 2.93012 20.089 3.3511 20.931 4.15097C21.394 4.65615 21.6887 5.32972 21.7729 6.12959C21.7729 6.25588 21.7729 6.46637 21.7729 6.80316C21.7729 7.22414 21.7729 7.68722 21.7729 7.81352C21.7308 8.78178 20.8047 8.99227 20.6784 8.99227H17.7736C17.3526 8.95017 16.679 8.78178 16.679 7.85562V6.12959C16.679 5.7928 16.4685 5.54021 16.1738 5.41392C15.9213 5.32972 8.55405 5.32972 8.30146 5.41392C8.00677 5.49811 7.79628 5.7928 7.79628 6.12959V7.85562C7.79628 8.78178 7.1227 8.95017 6.70172 8.99227H3.79694C3.67064 8.99227 2.74448 8.78178 2.70238 7.81352C2.70238 7.68722 2.70238 7.22414 2.70238 6.80316C2.70238 6.46637 2.70238 6.29798 2.70238 6.17169C2.61818 5.32972 2.91287 4.65615 3.37595 4.15097Z"
-                  />
-                </svg>
-              </div>
-              <div className="w-full">
-                <h4 className="text-dark mb-1 text-xl font-bold">Phone Number</h4>
-                <p className="text-body-color text-base">(+62)81 414 257 9980</p>
-              </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z"
+                    />
+                  </svg>
+                  <div className="pl-6 pt-1">
+                    Messenger
+                  </div>
+                </button>
+              </Link>`
+             
             </div>
-            <div className="mb-8 flex w-full max-w-[370px]">
-              <div
-                className="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]"
-              >
-                <svg
-                  width="28"
-                  height="19"
-                  viewBox="0 0 28 19"
-                  className="fill-current"
-                >
-                  <path
-                    d="M25.3636 0H2.63636C1.18182 0 0 1.16785 0 2.6052V16.3948C0 17.8322 1.18182 19 2.63636 19H25.3636C26.8182 19 28 17.8322 28 16.3948V2.6052C28 1.16785 26.8182 0 25.3636 0ZM25.3636 1.5721C25.5909 1.5721 25.7727 1.61702 25.9545 1.75177L14.6364 8.53428C14.2273 8.75886 13.7727 8.75886 13.3636 8.53428L2.04545 1.75177C2.22727 1.66194 2.40909 1.5721 2.63636 1.5721H25.3636ZM25.3636 17.383H2.63636C2.09091 17.383 1.59091 16.9338 1.59091 16.3499V3.32388L12.5 9.8818C12.9545 10.1513 13.4545 10.2861 13.9545 10.2861C14.4545 10.2861 14.9545 10.1513 15.4091 9.8818L26.3182 3.32388V16.3499C26.4091 16.9338 25.9091 17.383 25.3636 17.383Z"
-                  />
-                </svg>
+
+            <Link href="https://wa.me/5621140579?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios.">
+              <div className="mb-8 flex w-full justify-center">
+                {/* whatsapp */}
+                <button
+                  type="button"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  className="bg-teal-600 mb-2 flex rounded px-8 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                  >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                  </svg>
+                  <div className='pl-7 pt-1'>
+                    whatsapp
+                  </div>
+                </button>
               </div>
-              <div className="w-full">
-                <h4 className="text-dark mb-1 text-xl font-bold">Email Address</h4>
-                <p className="text-body-color text-base">info@yourdomain.com</p>
+
+            </Link>
+
+            <Link href='https://www.linkedin.com/company/colibri-blockchain-development'>
+              <div className="mb-8 flex w-full justify-center">
+                {/* Linkedin */}
+                <button
+                  type="button"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  className="bg-sky-700 mb-2 flex rounded px-9 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                  </svg>
+                  <div className='pl-8 pt-1'>
+                    LinkedIn
+                  </div>
+                </button>
               </div>
-            </div>
+            </Link> 
+            
+
           </div>
         </div>
         <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
           <div className="relative rounded-lg bg-white p-8 shadow-lg sm:p-12">
-            <form>
+            <form onSubmit={formSubmit}>
               <div className="mb-6">
                 <input
+                  value={query.name}
+                  onChange={handleParam()}
+                  name="name"
                   type="text"
                   placeholder="Your Name"
                   className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
@@ -106,20 +170,23 @@ export default function contact()  {
               </div>
               <div className="mb-6">
                 <input
+                  value={query.email}
+                  onChange={handleParam()}
                   type="email"
+                  name="email"
+                  required          
                   placeholder="Your Email"
                   className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
                 />
               </div>
-              <div className="mb-6">
-                <input
-                  type="text"
-                  placeholder="Your Phone"
-                  className="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                />
-              </div>
+              
               <div className="mb-6">
                 <textarea
+                  name="message"
+                  value={query.message}
+                  onChange={handleParam()}
+                  required
+                  type="text"
                   rows="6"
                   placeholder="Your Message"
                   className="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
@@ -128,7 +195,7 @@ export default function contact()  {
               <div>
                 <button
                   type="submit"
-                  className="bg-primary border-primary w-full rounded border p-3 text-white transition hover:bg-opacity-90"
+                  className="bg-primary border-primary w-full rounded border p-3 text-white transition hover:bg-opacity-90 bg-blue-500"
                 >
                   Send Message
                 </button>
@@ -145,7 +212,7 @@ export default function contact()  {
                 >
                   <path
                     fillRule="evenodd"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                     d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z"
                     fill="#3056D3"
                   />
@@ -947,7 +1014,7 @@ export default function contact()  {
       </div>
     </div>
   </section></div>
-  <Footer />
+   <Footer />
   </div>
   
   )

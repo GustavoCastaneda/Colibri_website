@@ -150,9 +150,11 @@ export default function Header() {
               </a>
             </div>
             <div className="-my-2 -mr-2 lg:hidden">
-              <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <Popover.Button className="mr-5 mt-1 inline-flex items-center justify-center rounded-md bg-white pl-1 pt-2 pb-2 pr-3  text-black hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                 <span className="sr-only">Open menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="24" viewBox="0 0 15 24" fill="currentColor">
+                  <path d="M1 3H39C39.5523 3 40 3.44772 40 4C40 4.55228 39.5523 5 39 5H1C0.447715 5 0 4.55228 0 4C0 3.44772 0.447715 3 1 3ZM1 11H39C39.5523 11 40 11.4477 40 12C40 12.5523 39.5523 13 39 13H1C0.447715 13 0 12.5523 0 12C0 11.4477 0.447715 11 1 11ZM1 19H39C39.5523 19 40 19.4477 40 20C40 20.5523 39.5523 21 39 21H1C0.447715 21 0 20.5523 0 20C0 19.4477 0.447715 19 1 19Z"/>
+                  </svg>
               </Popover.Button>
             </div>
             <Popover.Group as="nav" className="hidden space-x-10 lg:space-x-20 xl:space-x-32 md:space-x-10 lg:flex mt-3">
