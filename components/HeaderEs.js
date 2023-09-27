@@ -16,8 +16,7 @@ import {
   ClipboardDocumentIcon,
   GlobeAltIcon,
   DocumentCheckIcon,
-  CubeTransparentIcon,
-  PuzzlePieceIcon
+  CubeTransparentIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { CLIENT_PUBLIC_FILES_PATH } from 'next/dist/shared/lib/constants'
@@ -32,31 +31,24 @@ import { navVariants, } from '../utils/motion';
 
 const solutions = [
   {
-    name: 'Companies',
+    name: 'Compañias',
     description: 'Blockchain Solutions for companies: Smart Contracts, DeApps, Web development',
     href: '/solutions.html',
     icon: BuildingOfficeIcon,
   },
   {
-    name: 'Schools & Institutions',
+    name: 'Escuelas e Instituciones',
     description: 'Tokens, certificates and aplications with Blockchain technology to make them more secure.',
     href: '/solutions.html',
     icon: AcademicCapIcon,
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '/solutions', icon: ShieldCheckIcon },
+  { name: 'Seguridad', description: "Your customers' data will be safe and secure.", href: '/solutions', icon: ShieldCheckIcon },
   {
     name: 'NFT´S',
     description: "SmartContracts, Nft minitng site, Blockchain Consulting and everything you need to launch your collection.",
     href: '/solutions.html',
     icon: RocketLaunchIcon,
   },
-
-  {
-    name: 'AI Solutions',
-    description: "Let us empower your business with cutting-edge AI solutions, crafted by the industry's top developers.",
-    href: '/services.html',
-    icon: PuzzlePieceIcon,
-    },  
   
 ]
 const services = [
@@ -67,21 +59,21 @@ const services = [
       icon:ClipboardDocumentIcon,
     },
     {
-      name: 'Web Development',
+      name: 'Desarrollo Web',
       description: 'Web3 Integrations, Mobile Responsiveness, Minting Pages, Landing Pages, E-commerce',
       href: '/services.html',
       icon: GlobeAltIcon,
     },
     
     {
-      name: 'Tokens and Centificates',
+      name: 'Tokens y Certificados',
       description: "With the Smart Contract technology we can create certificates that can live inside Blockchain, like COVID vaccine certificates, graduation certificates, etc. ",
       href: '/services.html',
       icon: DocumentCheckIcon,
     },
 
     {
-        name: 'Blockchain Consulting',
+        name: 'Consultoria en Blockchain',
         description: "Let us help you answer the most complicate questions you may have, and help you to execute the most dificul challenges",
         href: '/services.html',
         icon: CubeTransparentIcon,
@@ -93,13 +85,6 @@ const services = [
     href: '/services.html',
     icon: RocketLaunchIcon,
     },  
-
-    {
-      name: 'AI Solutions',
-      description: "Let us empower your business with cutting-edge AI solutions, crafted by the industry's top developers.",
-      href: '/services.html',
-      icon: PuzzlePieceIcon,
-      },  
     
   ]
 
@@ -138,7 +123,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Header() {
+export default function HeaderEs() {
   return (
     <motion.nav 
       variants={ navVariants }
@@ -154,7 +139,7 @@ export default function Header() {
                 <span className="sr-only">Colibri Logo</span>
                 <div className="sm:h-12 w-48">
                       <Image
-                      src="https://imgcolibweb.s3.us-west-1.amazonaws.com/Logo+completo+fondo+blanco+(1).png"
+                      src="https://imgcolibweb.s3.us-west-1.amazonaws.com/Logo-completo-fondo-blanco-_1_.webp"
                       alt="Colibri Logo"
                       width={192}
                       height={48}
@@ -164,10 +149,10 @@ export default function Header() {
                 </div>
               </a>
             </div>
-            <div className="-my-2 -mr-2 lg:hidden ">
+            <div className="-my-2 -mr-2 lg:hidden">
               <div className='inline-block text-sm'>
-                  <Link href="/es.html">
-                      MXN/ESP
+                  <Link href="/">
+                      ENG/US
                   </Link>
               </div>
               <Popover.Button className="mr-5 mt-1 inline-flex items-center justify-center rounded-md bg-white pl-1 pt-2 pb-2 pr-3  text-black hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -187,7 +172,7 @@ export default function Header() {
                         'group inline-flex items-center text-lg rounded-md  font-medium hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                       )}
                     >
-                      <span>Solutions</span>
+                      <span>Soluciones</span>
                       <ChevronDownIcon
                         className={classNames(
                           open ? 'text-gray-600' : 'text-gray-900',
@@ -253,7 +238,7 @@ export default function Header() {
                         'group inline-flex items-center rounded-md text-lg font-medium hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                       )}
                     >
-                      <span>Services</span>
+                      <span>Servicios</span>
                       <ChevronDownIcon
                         className={classNames(
                           open ? 'text-gray-600' : 'text-gray-900',
@@ -312,8 +297,8 @@ export default function Header() {
               
 
               
-              <a href="ai.html" className="text-lg font-medium text-gray-900 hover:text-gray-700">
-                AI Solutions
+              <a href="/ai.html" className="text-lg font-medium text-gray-900 hover:text-gray-700">
+                Inteligencia Artificial
               </a>
 
                               
@@ -398,9 +383,7 @@ export default function Header() {
 
 
             <div className="hidden items-center justify-end lg:flex md:flex-1 lg:w-0 mt-3">
-              {/* <a href="#" className="whitespace-nowrap text-base font-medium text-gray-900 hover:text-gray-900">
-                About us
-              </a> */}
+              
               <Menu as="div" className="relative inline-block text-left">
                   <div>
                     <Menu.Button className="inline-flex w-full justify-center rounded-md py-2 text-lg text-gray-900 font-medium">
@@ -456,7 +439,7 @@ export default function Header() {
                 href="/contact.html"
                 className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
               >
-                Contact
+                Contacto
               </a>
             </div>
           </div>
@@ -506,12 +489,12 @@ export default function Header() {
               </div>
               <div className="space-y-6 py-6 px-5">
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  <a href="es.html" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Español/Mxn
+                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Pricing
                   </a>
 
-                  <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    English/Int
+                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Docs
                   </a>
                   {resources.map((item) => (
                     <a

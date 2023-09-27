@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/logo-header.webp'
+import Logo from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website_servicios/public/images/logo-header.webp'
 import Image from 'next/image';
 
 

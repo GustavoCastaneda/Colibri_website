@@ -1,0 +1,65 @@
+/* Copied from https://stackblitz.com/edit/react-ts-r7bry2?file=style.css */
+input[type='range'] {
+  --color-low: dodgerblue;
+  --color-high: magenta;
+  --color-track-background: hsla(var(--theme-hue) 80% 50% / 0.25);
+  --color-thumb: hsla(var(--theme-hue) 80% 90% / 1);
+  --color-thumb-focus: hsla(var(--theme-hue) 100% 90% / 1);
+  --size-track: 0.1rem;
+  --size-thumb: 0.75rem;
+  --size-hover-bounds: 1rem;
+  --size-outline-width: 2px;
+  --padding-sm: 0.25rem;
+  --padding-md: 0.5rem;
+  --padding-lg: 1rem;
+  --radius-full: 99rem;
+  --radius-lg: 1rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+  --time-transition: 150ms;
+  --time-transition-delay: 3000ms;
+
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: auto;
+  color: inherit;
+  flex: 1 1 auto;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  background-color: var(--color-thumb);
+  height: var(--size-thumb);
+  width: var(--size-thumb);
+  border: 0;
+  border-radius: 0.15rem;
+  transform: translateY(
+    calc((var(--size-track) / 2) - (var(--size-thumb) / 2))
+  );
+}
+input[type='range']:focus::-webkit-slider-thumb {
+  background: var(--color-thumb-focus);
+  box-shadow: 0 0 0 var(--size-outline-width) var(--color-track-background),
+    0 0 0 calc(var(--size-outline-width) * 2) var(--color-track-background);
+  z-index: 20;
+}
+input[type='range']:hover:not(:focus)::-webkit-slider-thumb {
+  box-shadow: 0 0 0 var(--size-outline-width) black;
+}
+input[type='range']:active::-webkit-slider-thumb {
+  cursor: ew-resize;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  pointer-events: none;
+  background: var(--color-track-background);
+  backdrop-filter: blur(4px);
+  height: var(--size-track);
+  border-radius: 999px;
+}

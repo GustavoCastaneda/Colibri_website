@@ -16,8 +16,7 @@ import {
   ClipboardDocumentIcon,
   GlobeAltIcon,
   DocumentCheckIcon,
-  CubeTransparentIcon,
-  PuzzlePieceIcon
+  CubeTransparentIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { CLIENT_PUBLIC_FILES_PATH } from 'next/dist/shared/lib/constants'
@@ -51,17 +50,12 @@ const solutions = [
     icon: RocketLaunchIcon,
   },
 
-  {
-    name: 'AI Solutions',
-    description: "Let us empower your business with cutting-edge AI solutions, crafted by the industry's top developers.",
-    href: '/services.html',
-    icon: PuzzlePieceIcon,
-    },  
+ 
   
 ]
 const services = [
     {
-      name: 'Smart Contracts',
+      name: 'AI Solutions',
       description: 'We can create any contract that you want iside the blockchain.',
       href: '/services.html',
       icon:ClipboardDocumentIcon,
@@ -93,13 +87,6 @@ const services = [
     href: '/services.html',
     icon: RocketLaunchIcon,
     },  
-
-    {
-      name: 'AI Solutions',
-      description: "Let us empower your business with cutting-edge AI solutions, crafted by the industry's top developers.",
-      href: '/services.html',
-      icon: PuzzlePieceIcon,
-      },  
     
   ]
 
@@ -138,7 +125,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Header() {
+export default function HeaderAi() {
   return (
     <motion.nav 
       variants={ navVariants }
@@ -154,7 +141,7 @@ export default function Header() {
                 <span className="sr-only">Colibri Logo</span>
                 <div className="sm:h-12 w-48">
                       <Image
-                      src="https://imgcolibweb.s3.us-west-1.amazonaws.com/Logo+completo+fondo+blanco+(1).png"
+                      src="https://imgcolibweb.s3.us-west-1.amazonaws.com/Logo+completo+fondo+negro.png"
                       alt="Colibri Logo"
                       width={192}
                       height={48}
@@ -183,14 +170,14 @@ export default function Header() {
                   <>
                     <Popover.Button
                       className={classNames(
-                        open ? 'text-gray-900' : 'text-gray-900',
+                        open ? 'text-white' : 'text-white',
                         'group inline-flex items-center text-lg rounded-md  font-medium hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                       )}
                     >
                       <span>Solutions</span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? 'text-gray-600' : 'text-gray-900',
+                          open ? 'text-gray-600' : 'text-white',
                           'ml-2 h-5 w-5 group-hover:text-gray-500'
                         )}
                         aria-hidden="true"
@@ -249,14 +236,14 @@ export default function Header() {
                   <>
                     <Popover.Button
                       className={classNames(
-                        open ? 'text-gray-900' : 'text-gray-900',
+                        open ? 'text-white' : 'text-white',
                         'group inline-flex items-center rounded-md text-lg font-medium hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                       )}
                     >
                       <span>Services</span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? 'text-gray-600' : 'text-gray-900',
+                          open ? 'text-gray-600' : 'text-white',
                           'ml-2 h-5 w-5 group-hover:text-gray-500'
                         )}
                         aria-hidden="true"
@@ -312,7 +299,7 @@ export default function Header() {
               
 
               
-              <a href="ai.html" className="text-lg font-medium text-gray-900 hover:text-gray-700">
+              <a href="/ai.html" className="text-lg font-medium text-white hover:text-gray-700">
                 AI Solutions
               </a>
 
@@ -324,14 +311,14 @@ export default function Header() {
                   <>
                     <Popover.Button
                       className={classNames(
-                        open ? 'text-gray-900' : 'text-gray-900',
+                        open ? 'text-white' : 'text-white',
                         'group inline-flex items-center rounded-md text-lg font-medium hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
                       )}
                     >
                       <span>More</span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? 'text-gray-600' : 'text-gray-900',
+                          open ? 'text-gray-600' : 'text-white',
                           'ml-2 h-5 w-5 group-hover:text-gray-500'
                         )}
                         aria-hidden="true"
@@ -403,9 +390,9 @@ export default function Header() {
               </a> */}
               <Menu as="div" className="relative inline-block text-left">
                   <div>
-                    <Menu.Button className="inline-flex w-full justify-center rounded-md py-2 text-lg text-gray-900 font-medium">
+                    <Menu.Button className="inline-flex w-full justify-center rounded-md py-2 text-lg text-white font-medium">
                       Languaje
-                      <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+                      <ChevronDownIcon className="-mr-1 h-5 w-5 text-white" aria-hidden="true" />
                     </Menu.Button>
                   </div>
 

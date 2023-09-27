@@ -7,7 +7,7 @@ import { fadeIn, container, item, staggerContainer, cardVariants, textVariant2, 
 
 
 
-export default function CtaSection() {
+export default function CtaSectionEs() {
   const [playCount, setPlayCount] = useState(0);
 
   const handleEnded = () => {
@@ -25,9 +25,9 @@ export default function CtaSection() {
             whileInView="show" 
             viewport={{ once: 'false', amount: .25}}
             className="flex flex-col text-center w-full mb-10 ">
-                    <h2 className="text-indigo-500 tracking-widest font-medium title-font mb-1">BLOCKCHAIN FOR THE FUTURE</h2>
+                    <h2 className="text-indigo-500 tracking-widest font-medium title-font mb-1">BLOCKCHAIN PARA EL FUTURO</h2>
                     <div>
-                      <h1 className="sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-900">Discover how blockchain certificates technology can transform your business today.</h1>
+                      <h1 className="sm:text-4xl text-2xl font-medium title-font mb-4 text-gray-900">Con Certificados Blockchain descubre cómo la tecnología puede transformar tu negocio hoy.</h1>
                       
                     </div>
             </motion.div>
@@ -42,14 +42,15 @@ export default function CtaSection() {
                 <div>
                     <div className="grid lg:gap-8 lg:grid-cols-2  lg:items-center">
                         <div className="lg:col-start-2 lg:items-start lg:text-left items-center text-center">
-                          <div class="title-font sm:text-4xl text-4xl mb-4 font-medium gradient-text pb-5">Authenticity & trust, <p>linked forever.</p>
+                          <div class="title-font sm:text-4xl text-4xl mb-4 font-medium gradient-text pb-5">Autenticidad y confianza, <p>enlazados para siempre.</p>
                           <h3 className="gradient-text2 text-6xl sm:text-6xl font-extrabold  titulos pt-2">CertSecure Pro</h3>
                         </div>
-                            <p className="mt-3 text-lg text-gray-700 texto text-justify mr-5">Looking to ensure the authenticity and security of your credentials? Our blockchain services for academic certificates are the solution. From immutable verification of academic achievements to decentralized validation of merits, we have the tools and expertise to elevate the value and trust of your certifications to the highest level.</p>
+                            <p className="mt-3 text-lg text-gray-700 texto text-justify mr-5">¿Buscas garantizar la autenticidad y seguridad de tus credenciales? Nuestro servicio  de  Certificados Escoleres en la blockchain es la solución. Desde la verificación inmutable de logros académicos hasta la validación descentralizada de méritos, poseemos las herramientas y experiencia para elevar el valor y confianza de tus certificaciones al máximo nivel.</p>
                             <div className="mt-12 space-y-12 hidden lg:block">
                                 <div class="flex justify-center">
-                                   <a href="/contact.html" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Contact Us</a>
-                                  
+                                  <a href="/contact.html" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                                    Contáctanos
+                                  </a>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +68,7 @@ export default function CtaSection() {
                         </div>
                         <div class="flex justify-center pt-14 lg:hidden">
                                    <a href="/contact.html" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                                    Contact Us
+                                    Contáctanos
                                   </a>
                                 </div>
                     </div>

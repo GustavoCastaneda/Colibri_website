@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 
 
-export default function Main()  {
+export default function MainEs()  {
     
   return (
     <div>
@@ -22,17 +22,17 @@ export default function Main()  {
                     
                     <div className='flex flex-row justify-between items-center w-full '>
                         <motion.h1 variants={textVariant(1.1)}className='text-center md:text-center lg:text-left font-black text-[50px] sm:text-7xl md:text-7xl xl:text-[96px] text-black flex-1'>
-                            Welcome <p><span>to the</span></p><p
+                            Bienvenido <p><span>a la</span></p><p
                             ><span className="relative font-sans text-transparent  bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 z-0">BLOCKCHAIN</span></p>
                         </motion.h1>
                         
                     </div>
                     <div>
                         <motion.p variants={ textVariant(1.2)} className="text-center md:text-center w-full mb-6 text-gray-500 lg:mb-8 md:text-lg lg:text-2xl font-bold pt-10">
-                            We specialize in web3 development & Blockchain Services, delivering tailor-made software and projects for businesses.
+                            Nos especializamos en desarrollo web 3.0 y servicios Blockchain, ofreciendo software y proyectos personalizados para empresas.
                             </motion.p>
 
-                        <motion.div variants={ navVariants }
+                            <motion.div variants={ navVariants }
                             initial="hidden"
                             whileInView="show" 
                             viewport={{ once: 'flase', amount: 0.25 }}

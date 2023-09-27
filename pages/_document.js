@@ -5,6 +5,17 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MDE4KPXWK"></script>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-3MDE4KPXWK');
+                  `,
+                }}
+              />
             <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
@@ -12,7 +23,7 @@ class MyDocument extends Document {
             <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
             <meta name="msapplication-TileColor" content="#2d89ef"/>
             <meta name="theme-color" content="#ffffff"/>
-            <title>Colibri Web 3.0</title>
+            
         </Head>
         <body>
           <Main />

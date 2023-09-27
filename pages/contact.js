@@ -104,7 +104,7 @@ export default function contact()  {
              
             </div>
 
-            <Link href="https://wa.me/5621140579?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios.">
+            <Link href="https://wa.me/7222287254?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios.">
               <div className="mb-8 flex w-full justify-center">
                 {/* whatsapp */}
                 <button

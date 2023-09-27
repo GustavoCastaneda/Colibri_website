@@ -19,6 +19,19 @@
 
 
 
+.barlight {
+  --first: conic-gradient(from 90deg at 60% 50%,var(--top),var(--bottom));
+  --second: conic-gradient(from 270deg at 40% 50%,var(--bottom),var(--top));
+  margin-bottom: -420px;
+
+}
+
+
+
+
+
+
+
 .fondo{
     background-color: rgb(56, 189, 248);
     background-image: radial-gradient(at 25% 74%, rgb(94, 234, 212) 0, transparent 35%), radial-gradient(at 27% 77%, rgb(96, 165, 250) 0, transparent 50%), radial-gradient(at 12% 25%, rgb(226, 232, 240) 0, transparent 79%), radial-gradient(at 35% 49%, rgb(237, 233, 254) 0, transparent 52%), radial-gradient(at 94% 8%, rgb(255, 255, 255) 0, transparent 66%), radial-gradient(at 85% 46%, rgb(252, 165, 165) 0, transparent 47%);
@@ -167,7 +180,62 @@
   
 }
 
+.gradient-text2{
+  background-color: rgb(203, 213, 225);
+  background-image: radial-gradient(at 19% 11%, rgb(0, 254, 64) 0, transparent 49%), radial-gradient(at 89% 86%, rgba(221, 32, 32, 0.692) 0,
+  transparent 49%), radial-gradient(at 89% 86%, rgba(152, 32, 221, 0.217) 0, transparent 60%), radial-gradient(at 77% 0%, rgb(245, 168, 2) 0, transparent 43%), radial-gradient(at 11% 100%, rgb(2, 132, 199) 0, transparent 92%), radial-gradient(at 45% 46%, rgb(153, 27, 27) 0, transparent 100%), radial-gradient(at 89% 27%, rgb(149, 80, 56) 0, transparent 32%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  
+}
 
+.gradient-text3{
+  background-color: rgb(203, 213, 225);
+  background-image: radial-gradient(at 19% 11%, rgb(254, 38, 0) 0, transparent 49%), radial-gradient(at 89% 86%, rgb(51, 157, 255) 0,
+  transparent 49%), radial-gradient(at 89% 86%, rgba(51, 32, 221, 0.217) 0, transparent 60%), radial-gradient(at 77% 0%, rgb(245, 2, 2) 0, transparent 43%), radial-gradient(at 11% 100%, rgb(251, 255, 0) 0, transparent 92%), radial-gradient(at 45% 46%, rgb(80, 67, 255) 0, transparent 100%), radial-gradient(at 89% 27%, rgb(62, 79, 255) 0, transparent 32%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  
+}
+
+.gradient-textAi{
+  background-color: rgb(148, 163, 184);
+  background-image: linear-gradient(to left top, rgb(148, 163, 184), rgb(241, 245, 249), rgb(148, 163, 184));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-text4{
+  background-color: rgb(97, 255, 29);
+  background-image: linear-gradient(to left top, rgb(223, 255, 45), rgb(29, 206, 250), rgb(213, 255, 76));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.mesh{
+  background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 100% 59%, hsla(240,100%,70%,0.41) 0px, transparent 50%),
+radial-gradient(at 29% 0%, hsla(343,100%,76%,0.33) 0px, transparent 50%);
+}
+
+.mesh2{
+  background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 16% 61%, hsla(343,100%,46%,0.19) 0px, transparent 50%);
+}
+
+.mesh3{
+  background-color:hsla(0,0%,0%,1);
+background-image:
+radial-gradient(at 0% 46%, hsla(28,100%,50%,0.62) 0px, transparent 62%),
+radial-gradient(at 0% 58%, hsla(240,100%,56%,0.71) 0px, transparent 55%);
+z-index: -1;
+}
 
 
 /* Oculta la versión móvil por defecto */
@@ -194,6 +262,350 @@
   background-image: radial-gradient(at 0% 8%, rgb(59, 130, 246) 0, transparent 30%), radial-gradient(at 100% 66%, rgb(139, 92, 246) 0, transparent 43%), radial-gradient(at 22% 100%, rgb(56, 189, 248) 0, transparent 31%), radial-gradient(at 79% 0%, rgb(216, 180, 254) 0, transparent 23%);
 
 }
+
+
+
+
+
+
+
+
+.gradient-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: var(--min-height);
+}
+
+.gradient {
+  --x-raw: 50;
+  --y-raw: 25;
+  --pos-x: calc(var(--x-raw) * 1%);
+  --pos-y: calc(var(--y-raw) * 0.25%);
+  --min-height: 60vh;
+
+  --light-bar-width-min: 100px;
+  --light-bar-width-max: 90vw;
+  --light-bar-width: clamp(
+    20%,
+    var(--light-bar-width-min),
+    var(--light-bar-width-max)
+  );
+
+  --light-hue: var(--theme-hue, 210);
+  --light-intensity: 75;
+  --light-brightness: 90;
+  --light-color-mix: 98;
+  --light-color: hsla(
+    var(--light-hue) calc(var(--light-color-mix) * 1%)
+      calc(var(--light-intensity) * 1%) / calc(var(--light-brightness) * 1%)
+  );
+  --light-color-transparent: hsla(
+    var(--light-hue) calc(var(--light-color-mix) * 1%)
+      calc(var(--light-intensity) * 1%) / 0
+  );
+
+  --light-ambient-hue: var(--light-hue);
+  --light-ambient-intensity: 50;
+  --light-ambient-brightness: 0;
+  --light-ambient-color-mix: 90;
+  --light-ambient-color: hsla(
+    var(--light-ambient-hue) calc(var(--light-ambient-color-mix) * 1%)
+      calc(var(--light-ambient-intensity) * 1%) /
+      calc(var(--light-ambient-brightness) * 1%)
+  );
+  --light-ambient: linear-gradient(
+    transparent,
+    var(--light-ambient-color),
+    transparent calc(var(--pos-y) * 2)
+  );
+
+  --mask-image: radial-gradient(
+    circle at var(--pos-x) var(--pos-y),
+    black,
+    transparent var(--min-height) 1%
+  );
+
+  /* Position the element */
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; */
+  position: relative;
+  width: 100%;
+
+  /* Mimic ambient light */
+  background: var(--light-ambient);
+
+/*   
+  background: var(--light-ambient-color)
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' style='opacity: 0.2'/%3E%3C/svg%3E")
+    repeat;
+  background-size: 200px 200px; */
+ 
+
+  /* Apply the mask */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: var(--mask-image);
+  mask-image: var(--mask-image);
+}
+.gradient:before,
+.gradient:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  mix-blend-mode: overlay;
+  z-index: -1;
+  animation: lightBarOn 1s ease;
+}
+
+@keyframes lightBarOn {
+  from {
+    background: transparent;
+  }
+}
+
+.gradient:before {
+  left: 0;
+  background: conic-gradient(
+      from 0.25turn at calc(var(--pos-x) + (var(--light-bar-width) * 0.1))
+        var(--pos-y),
+      var(--light-color),
+      var(--light-color-transparent)
+    ),
+    var(--light-ambient);
+}
+
+.gradient:after {
+  right: 0;
+  background: conic-gradient(
+      from -0.25turn at calc((var(--pos-x) - (var(--light-bar-width) * 0.1))) var(--pos-y),
+      var(--light-color-transparent),
+      var(--light-color)
+    ),
+    linear-gradient(
+      transparent,
+      var(--light-ambient-color),
+      transparent calc(var(--pos-y) * 2)
+    );
+}
+
+
+
+.alineacion{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.containerSlider {
+ 
+  width: 100vw;
+  max-height: 800px;
+  max-width: 1280px;
+  min-height: 500px;
+  min-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.border1 {
+  height: 369px;
+  width: 290px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+
+.border1:hover {
+  border: 1px solid white;
+}
+
+.card {
+  height: 379px;
+  width: 300px;
+  background: grey;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 70px 63px -60px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card0 {
+  background: url('https://imgcolibweb.s3.us-west-1.amazonaws.com/DALL%C2%B7E+2023-08-23+19.53.41+-+An+oil+realistic+painting+portrait+of+a+basketball+player+dunking%2C+depicted+as+an+explosion+of+a+nebula.png') center center no-repeat;
+  background-size: 400px;
+  text-align: center;
+}
+
+.card0:hover {
+  background: url('https://imgcolibweb.s3.us-west-1.amazonaws.com/Disen%CC%83o+sin+ti%CC%81tulo+(9).jpg') left center no-repeat;
+  background-size: 405px;
+  
+}
+
+.card0:hover h2, .card0:hover .fa {
+  opacity: 1;
+  text-align: center;
+}
+
+
+
+.card1 {
+  background: url('https://imgcolibweb.s3.us-west-1.amazonaws.com/img-zrGqQY2rCqxnXZbnF7pFr3sG.png') center center no-repeat;
+  background-size: 400px;
+  text-align: center;
+}
+
+.card1:hover {
+  background: url('https://imgcolibweb.s3.us-west-1.amazonaws.com/Disen%CC%83o+sin+ti%CC%81tulo+(11).jpg') left center no-repeat;
+  background-size: 405px;
+}
+
+.card1:hover h2, .card1:hover .fa {
+  opacity: 1;
+  text-align: center;
+}
+
+.card2 {
+  background: url('https://imgcolibweb.s3.us-west-1.amazonaws.com/img-StiaSZ7X2iF84iFsvTIesHaA.png') center center no-repeat;
+  background-size: 400px;
+  text-align: center;
+}
+
+.card2:hover {
+  background: url('https://imgcolibweb.s3.us-west-1.amazonaws.com/Disen%CC%83o+sin+ti%CC%81tulo+(12).jpg') left center no-repeat;
+  background-size: 405px;
+}
+
+.card2:hover h2, .card2:hover .fa {
+  opacity: 1;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fa {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.icons {
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  top: 226px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+
+/* Estilos para pantallas medianas (ej. tablets) */
+@media screen and (max-width: 1024px) {
+  .containerSlider {
+    width: 100vw;
+    max-height: 800px;
+    max-width: 1280px;
+    min-height: 500px;
+    min-width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .border1, .card, .card0, .card1, .card2 {
+    width: 250px; /* Ocupa el 90% del ancho de la pantalla */
+    height: 400px; /* Altura automática, puedes ajustar según necesites */
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+  }
+  .card0, .card1, .card2 {
+    background-size: cover; /* Ajusta la imagen al tamaño de la tarjeta */
+  }
+
+  .card0:hover, .card1:hover, .card2:hover {
+    background-size: cover;
+  }
+
+
+  /* Adapta elementos para pantallas medianas si lo deseas */
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+
+  .containerSlider {
+    width: 100vw;
+    max-height: 800px;
+    max-width: 180px;
+    min-height: 380px;
+    min-width: 390px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .border1, .card, .card0, .card1, .card2 {
+    width: 110px; /* Ocupa el 90% del ancho de la pantalla */
+    height: 250px; /* Altura automática, puedes ajustar según necesites */
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+  }
+
+  .card0, .card1, .card2 {
+    background-size: cover; /* Ajusta la imagen al tamaño de la tarjeta */
+  }
+
+  .card0:hover, .card1:hover, .card2:hover, h2 {
+    background-size: cover;
+  }
+  .border1:hover {
+    border: 1px solid white;
+  }
+
+ 
+  /* Si tienes más ajustes específicos para móviles, añádelos aquí */
+
+}
+
+
+
+
+
+
+
+
+
+
 
 @tailwind base;
 @tailwind components;

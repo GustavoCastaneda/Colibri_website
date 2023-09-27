@@ -2,9 +2,9 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HeadSolutions from '../components/HeadSolutions.js'
-import Firewall from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/nft-banner-5.webp'
-import Companies from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/nft-banner-2.webp'
-import Schools from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/nft-banner-3.webp'
+import Firewall from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website_servicios/public/images/nft-banner-5.webp'
+import Companies from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website_servicios/public/images/nft-banner-2.webp'
+import Schools from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website_servicios/public/images/nft-banner-3.webp'
 import PreFooter from '../components/PreFooter.js'
 import Image from 'next/image';
 import HeadServices from '../components/HeadServices'
@@ -101,8 +101,8 @@ export default function services() {
                                                     </div>
                                                 </div>
                                                 <div className="ml-4">
-                                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Cibo augue offendit has ad</h4>
-                                                    <p className="mt-2 dark:text-gray-400">An per velit appellantur, ut utinam minimum nominavi sit, odio nostro habemus ne nec. Ne sonet regione contentiones est.</p>
+                                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Web 3.0 integrations</h4>
+                                                    <p className="mt-2 dark:text-gray-400">Unlock the full potential of blockchain technology with our Web 3.0 integrations. From decentralized finance to non-fungible tokens, we help you seamlessly integrate the latest blockchain solutions into your business.</p>
                                                 </div>
                                             </div>
                                             <div className="flex">
@@ -114,8 +114,8 @@ export default function services() {
                                                     </div>
                                                 </div>
                                                 <div className="ml-4">
-                                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">At eum ferri luptatum lobortis</h4>
-                                                    <p className="mt-2 dark:text-gray-400">Te per quidam maiorum ocurreret, etiam delicatissimi usu ad. Ne has quod periculis. Te sit primis iisque efficiantur.</p>
+                                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Development</h4>
+                                                    <p className="mt-2 dark:text-gray-400">A strong online presence is essential for any business in today's digital age. Our web development services help you build a professional, user-friendly website that reflects your brand and engages your audience. From custom design to e-commerce integration, we deliver a high-quality website that meets your unique needs.</p>
                                                 </div>
                                             </div>
                                             <div className="flex">
@@ -127,8 +127,8 @@ export default function services() {
                                                     </div>
                                                 </div>
                                                 <div className="ml-4">
-                                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Dicunt verterem evertitur eu sea</h4>
-                                                    <p className="mt-2 dark:text-gray-400">Audire principes rationibus eam an, autem nominavi luptatum per te. Sumo fabulas vim eu, sonet saperet eleifend ut vix.</p>
+                                                    <h4 className="text-lg font-medium leading-6 dark:text-gray-50">Miting sites</h4>
+                                                    <p className="mt-2 dark:text-gray-400">Take advantage of the booming NFT market with our minting site services. Our team of experts guides you through the process of creating and launching your own unique NFT collection. With our support, you can mint your digital assets and connect with a global audience.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -163,7 +163,7 @@ export default function services() {
                                             </div>
                                             <div className="ml-4">
                                                 <h4 className="text-lg font-medium leading-6 text-black">Smart Contracts</h4>
-                                                <p className="mt-2 dark:text-gray-400">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
+                                                <p className="mt-2 dark:text-gray-400">Our smart contracts bring security and transparency to your business operations.</p>
                                             </div>
                                         </div>
                                         <div className="flex">
@@ -176,7 +176,7 @@ export default function services() {
                                             </div>
                                             <div className="ml-4">
                                                 <h4 className="text-lg font-medium leading-6 text-black">dApps</h4>
-                                                <p className="mt-2 dark:text-gray-400">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
+                                                <p className="mt-2 dark:text-gray-400">We create robust, efficient decentralized applications using cutting-edge blockchain technologies.</p>
                                             </div>
                                         </div>
                                         <div className="flex">
@@ -189,7 +189,7 @@ export default function services() {
                                             </div>
                                             <div className="ml-4">
                                                 <h4 className="text-lg font-medium leading-6 text-black">Web Development</h4>
-                                                <p className="mt-2 dark:text-gray-400">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
+                                                <p className="mt-2 dark:text-gray-400">We offer top-tier web development services, blending creativity with technical know-how.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -208,7 +208,7 @@ export default function services() {
                                 <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                                     <div className="lg:col-start-2">
                                         <h3 className="text-3xl font-bold tracking-tight sm:text-5xl dark:text-gray-900">Blockchain Consulting</h3>
-                                        <p className="mt-3 text-lg dark:text-gray-900">Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te latine theophrastus. Ea his tale nibh dissentias, mei exerci tamquam euripidis cu.</p>
+                                        <p className="mt-3 text-lg dark:text-gray-900">We can help you solve all your doubts and projects with our consultancy. We have experts in the field who can guide you in implementing blockchain solutions for your company.</p>
                                         <div className="mt-12 space-y-12">
                                             <div className="flex">
                                                 <div className="flex-shrink-0">
@@ -219,8 +219,8 @@ export default function services() {
                                                     </div>
                                                 </div>
                                                 <div className="ml-4">
-                                                    <h4 className="text-lg font-medium leading-6 text-black">Tokens</h4>
-                                                    <p className="mt-2 dark:text-gray-400">An per velit appellantur, ut utinam minimum nominavi sit, odio nostro habemus ne nec. Ne sonet regione contentiones est.</p>
+                                                    <h4 className="text-lg font-medium leading-6 text-black">Diagnosis</h4>
+                                                    <p className="mt-2 dark:text-gray-400">Discover facts - analysis and synthesis - examine the problem in detail.</p>
                                                 </div>
                                             </div>
                                             <div className="flex">
@@ -232,8 +232,8 @@ export default function services() {
                                                     </div>
                                                 </div>
                                                 <div className="ml-4">
-                                                    <h4 className="text-lg font-medium leading-6 text-black">Certificates & applications with Blockchain</h4>
-                                                    <p className="mt-2 dark:text-gray-400">Te per quidam maiorum ocurreret, etiam delicatissimi usu ad. Ne has quod periculis. Te sit primis iisque efficiantur.</p>
+                                                    <h4 className="text-lg font-medium leading-6 text-black">Action plan</h4>
+                                                    <p className="mt-2 dark:text-gray-400">Plan measures - Develop solutions, different options - Present improvement proposals to the client and how we will implement them.</p>
                                                 </div>
                                             </div>
                                             <div className="flex">
@@ -245,8 +245,8 @@ export default function services() {
                                                     </div>
                                                 </div>
                                                 <div className="ml-4">
-                                                    <h4 className="text-lg font-medium leading-6 text-black">Web development </h4>
-                                                    <p className="mt-2 text-base text-gray-800">Audire principes rationibus eam an, autem nominavi luptatum per te. Sumo fabulas vim eu, sonet saperet eleifend ut vix.</p>
+                                                    <h4 className="text-lg font-medium leading-6 text-black">Implementation</h4>
+                                                    <p className="mt-2 text-base text-gray-800">Contribute to the application - Proposal for adjustments - Training.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -281,7 +281,7 @@ export default function services() {
                                             </div>
                                             <div className="ml-4">
                                                 <h4 className="text-lg font-medium leading-6 text-black">Smart Contracts</h4>
-                                                <p className="mt-2 dark:text-gray-400">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
+                                                <p className="mt-2 dark:text-gray-400">We will create high-fidelity contracts tailored to the needs of your project with our team of developers.</p>
                                             </div>
                                         </div>
                                         <div className="flex">
@@ -293,8 +293,8 @@ export default function services() {
                                                 </div>
                                             </div>
                                             <div className="ml-4">
-                                                <h4 className="text-lg font-medium leading-6 text-black">dApps</h4>
-                                                <p className="mt-2 dark:text-gray-400">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
+                                                <h4 className="text-lg font-medium leading-6 text-black">Image & metadata management</h4>
+                                                <p className="mt-2 dark:text-gray-400">"Stand out in the market with high-quality NFTs thanks to our image and metadata management. Create unique and attractive NFTs with our help!</p>
                                             </div>
                                         </div>
                                         <div className="flex">
@@ -306,8 +306,8 @@ export default function services() {
                                                 </div>
                                             </div>
                                             <div className="ml-4">
-                                                <h4 className="text-lg font-medium leading-6 text-black">Web Development</h4>
-                                                <p className="mt-2 dark:text-gray-400">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
+                                                <h4 className="text-lg font-medium leading-6 text-black">Launch</h4>
+                                                <p className="mt-2 dark:text-gray-400">We will help you manage the launch of your collection, from creating your mining site, whitelist, public sale, and more.</p>
                                             </div>
                                         </div>
                                     </div>

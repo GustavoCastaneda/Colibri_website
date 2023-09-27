@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image';
-import blocks from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/NFT banner (6).png'
+import blocks from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website_servicios/public/images/NFT banner (6).png'
 import Link from 'next/link'
-import Blog from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website/public/images/blog-banner.webp'
+import Blog from '/Users/gustavoadolfocastanedaheras/Desktop/Colibri/Colibri_website_servicios/public/images/blog-banner.webp'
 
 
 const Blogs = () => {
